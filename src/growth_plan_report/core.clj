@@ -21,7 +21,7 @@
 (defn select-growth-plans [documents]
   (select-keys (get (first (filter (fn [x]
                                      (= (get-folder-id x) growth-plan-folder-id))
-                                   (get documents :documents))) :doc) [:name]))
+                                     (get documents :documents))) :doc) [:name]))
 
 (defn process-row [row]
   (let [id (first row)]
